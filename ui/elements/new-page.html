@@ -1,0 +1,422 @@
+<link rel="import" href="elem.html">
+
+<polymer-element name="new-page" attributes="selected">
+<template>
+
+	<!-- <more-route path="{{urlFor('login')}}" context></more-route> -->
+
+	<link rel="stylesheet" href="/_poly/tmpl/css/css.css">
+
+	<core-animated-pages selected="{{selected}}" transitions="slide-from-right">
+
+	<div class="content">
+		<div class="main" layout vertical>
+			<div class="title">Business Plan</div>
+			<paper-input floatinglabel label="Enter your Business Name"></paper-input>
+			<paper-input floatinglabel label="Enter your Name"></paper-input>
+			<paper-input floatinglabel label="Date of Birth"></paper-input>
+			<paper-input floatinglabel label="Enter your Business Address"></paper-input>
+			<paper-input floatinglabel label="Enter your Home Address"></paper-input>
+			<paper-input floatinglabel label="Enter your Business Telephone Number"  validate="^[0-9]*$" error="Input is not a number"></paper-input>
+			<paper-input floatinglabel label="Enter your Home Telephone Number"  validate="^[0-9]*$" error="Input is not a number"></paper-input>
+			<paper-calendar id="calendar"></paper-calendar>		
+			<paper-button raised class="black">Next</paper-button>
+		</div>
+		<div class="guild">
+			<div class="title">Note for Guidance</div>
+			<p>Explain in your own words what you are going to do</p>
+			<p><b>Consider the following if applicable:</b></p>
+			<ul>
+				<li>Town and Country regulations</li>
+				<li>Leasing(length, cost and notice of termination)</li>
+				<li>Rental(renewal and review)</li>
+				<li>Fixtures and Fittings</li>
+				<li>Types of Licenses required</li>
+				<li>Environmental/hygiene regulation</li>
+				<li>Cost</li>
+				<li>Size</li> 
+				<li>Location</li>
+				<li>Access</li>
+				<li>Security</li>
+			</ul>
+		</div>
+	</div>
+	<div class="content">
+		<div class="main" layout vertical>
+			<div class="title">Description of Business</div>
+			<paper-input-decorator label="Describe the products you make or sell or the services you provide?" floatingLabel>
+			<paper-autogrow-textarea>
+			<textarea></textarea>
+		</paper-autogrow-textarea>
+	</paper-input-decorator>
+	<paper-input-decorator label="Give the details of your business premises?" floatingLabel>
+	<paper-autogrow-textarea>
+	<textarea></textarea>
+</paper-autogrow-textarea>
+</paper-input-decorator>
+<paper-input-decorator label="Exlplain in your own words why you consider you and your business partners and your staff have the experience, ability and committment to make a success of this proposed business?" floatingLabel>
+<paper-autogrow-textarea>
+<textarea></textarea>
+</paper-autogrow-textarea>
+</paper-input-decorator>
+<p>Attach a cv or if you prefer give details covering their:</p>
+<li>Education and Qualifications</li>
+<li>Any previous work experience(give details)</li>
+<li>Training</li>
+<li>Anyother relevant information</li>
+<li>Hobbies and Interest</li>
+<li>Include any buainess training such as Booking keeping, Marketting, Sales etc or any specific skill training which is relevant</li>
+<input id="cv" type="file">
+<paper-input-decorator label="Have you identified or been advised of other training which would help your business e.g Professional, Technical or Business Training e.g Micro Entrepeneurship, YBI, Principles of Business?" floatingLabel>
+<paper-autogrow-textarea>
+<textarea></textarea>
+</paper-autogrow-textarea>
+</paper-input-decorator>
+<paper-button raised class="black">Next</paper-button>
+</div>
+<div class="guild">
+	<div class="title">Note for Guidance</div>
+	<p>Explain in your own words what you are going to do</p>
+	<p><b>Consider the following if applicable:</b></p>
+	<ul>
+		<li>Town and Country regulations</li>
+		<li>Leasing(length, cost and notice of termination)</li>
+		<li>Rental(renewal and review)</li>
+		<li>Fixtures and Fittings</li>
+		<li>Types of Licenses required</li>
+		<li>Environmental/hygiene regulation</li>
+		<li>Cost</li>
+		<li>Size</li> 
+		<li>Location</li>
+		<li>Access</li>
+		<li>Security</li>
+	</ul>
+</div>
+</div>
+<div class="content">
+	<div class="main" layout vertical>
+		<div class="title">Owner/Staff Personal Details</div>
+		Give details of knowledge appearance (attach CV's)
+		<paper-input-decorator label="Owner" floatingLabel>
+		<paper-autogrow-textarea>
+		<textarea></textarea>
+	</paper-autogrow-textarea>
+</paper-input-decorator>
+<input id="cv" type="file">
+<paper-input-decorator label="Staff" floatingLabel>
+<paper-autogrow-textarea>
+<textarea></textarea>
+</paper-autogrow-textarea>
+</paper-input-decorator>
+<input id="cv" type="file">
+</div>
+<div class="guild">
+	<div class="title">Note for Guidance</div>
+	<p>Explain in your own words what you are going to do</p>
+	<p><b>Consider the following if applicable:</b></p>
+	<ul>
+		<li>Town and Country regulations</li>
+		<li>Leasing(length, cost and notice of termination)</li>
+		<li>Rental(renewal and review)</li>
+		<li>Fixtures and Fittings</li>
+		<li>Types of Licenses required</li>
+		<li>Environmental/hygiene regulation</li>
+		<li>Cost</li>
+		<li>Size</li> 
+		<li>Location</li>
+		<li>Access</li>
+		<li>Security</li>
+	</ul>
+</div>
+</div>
+<div class="content">
+	<div class="main" layout vertical>
+		<div class="title">Business Training</div>
+		<paper-input-decorator label="Have you undertaken any business training relevant skills or business knowledge which will help you succeed with your proposal?
+		If so please give details (attach copies of relevant certifications)" floatingLabel>
+		<paper-autogrow-textarea>
+		<textarea></textarea>
+	</paper-autogrow-textarea>
+</paper-input-decorator>
+<input id="cv" type="file">
+<input id="cv" type="file">
+<input id="cv" type="file">
+<input id="cv" type="file">
+
+<p>Tell us who will buy your goods or services</p>
+
+<paper-input-decorator label="Do you have any promises of work from these people? If so give details of those who have agreed (Attach letters from thesse people where possible)" floatingLabel>
+<paper-autogrow-textarea>
+<textarea></textarea>
+</paper-autogrow-textarea>
+</paper-input-decorator>
+<input id="cv" type="file">
+<input id="cv" type="file">
+<input id="cv" type="file">
+<input id="cv" type="file">
+
+<paper-input-decorator label="Explain how you researched your market and what were the results.(Please attach evidence of the results e.g questinnaires)	i.e. Desk Research - eg looking at statistics, surveys, directories and other sources of  existing innformation" floatingLabel>
+<paper-autogrow-textarea>
+<textarea></textarea>
+</paper-autogrow-textarea>
+</paper-input-decorator>
+<input id="cv" type="file">
+<input id="cv" type="file">
+<input id="cv" type="file">
+<input id="cv" type="file">
+
+
+<paper-input-decorator label="Field Research - eg researching potential customers using questionnaires and interviews, observing competitor activity etc. Give details of your main competitors, their strengths and weaknesses" floatingLabel>
+<paper-autogrow-textarea>
+<textarea></textarea>
+</paper-autogrow-textarea>
+</paper-input-decorator>
+</div>
+<div class="guild">
+	<div class="title">Note for Guidance</div>
+	<p>Explain in your own words what you are going to do</p>
+	<p><b>Consider the following if applicable:</b></p>
+	<ul>
+		<li>Town and Country regulations</li>
+		<li>Leasing(length, cost and notice of termination)</li>
+		<li>Rental(renewal and review)</li>
+		<li>Fixtures and Fittings</li>
+		<li>Types of Licenses required</li>
+		<li>Environmental/hygiene regulation</li>
+		<li>Cost</li>
+		<li>Size</li> 
+		<li>Location</li>
+		<li>Access</li>
+		<li>Security</li>
+	</ul>
+</div>
+</div>
+<div class="content">
+	<div class="main" layout vertical>
+		<div class="title">Your Market</div>
+		<paper-input-decorator label="Who are your customers?" floatingLabel>
+		<paper-autogrow-textarea>
+		<textarea></textarea>
+	</paper-autogrow-textarea>
+</paper-input-decorator>
+
+<paper-input-decorator label="Details of market research (Evidence is required)" floatingLabel>
+<paper-autogrow-textarea>
+<textarea></textarea>
+</paper-autogrow-textarea>
+</paper-input-decorator>
+<input id="cv" type="file">
+<input id="cv" type="file">
+<input id="cv" type="file">
+<input id="cv" type="file">
+
+<paper-input-decorator label="Who are your competitiors(Evidence is required)" floatingLabel>
+<paper-autogrow-textarea>
+<textarea></textarea>
+</paper-autogrow-textarea>
+</paper-input-decorator>
+<input id="cv" type="file">
+<input id="cv" type="file">
+<input id="cv" type="file">
+<input id="cv" type="file">
+
+<paper-input-decorator label="How will you beat your competitors? Detail any special features or services you can provide" floatingLabel>
+<paper-autogrow-textarea>
+<textarea></textarea>
+</paper-autogrow-textarea>
+</paper-input-decorator>
+<paper-input-decorator label="While will people buy from you in preference to your competitors" floatingLabel>
+<paper-autogrow-textarea>
+<textarea></textarea>
+</paper-autogrow-textarea>
+</paper-input-decorator>
+<p>How and where will you sell your products or services e.g</p>
+<core-label horizontal layout class="chk">
+<paper-checkbox for></paper-checkbox>
+<div vertical layout>
+	Retail Shop
+</div>
+</core-label>
+<core-label horizontal layout class="chk">
+<paper-checkbox for></paper-checkbox>
+<div vertical layout>
+	Market Stall
+</div>
+</core-label>
+<core-label horizontal layout class="chk">
+<paper-checkbox for></paper-checkbox>
+<div vertical layout>
+	Telephone Sales
+</div>
+</core-label>
+<core-label horizontal layout class="chk">
+<paper-checkbox for></paper-checkbox>
+<div vertical layout>
+	Utilising Transport
+</div>
+</core-label>
+
+<p>How will consumers know about your product</p>
+<core-label horizontal layout class="chk">
+<paper-checkbox for></paper-checkbox>
+<div vertical layout>
+	Advertising
+</div>
+</core-label>
+<core-label horizontal layout class="chk">
+<paper-checkbox for></paper-checkbox>
+<div vertical layout>
+	Posters/Leaflets
+</div>
+</core-label>
+<core-label horizontal layout class="chk">
+<paper-checkbox for></paper-checkbox>
+<div vertical layout>
+	Shop windows
+</div>
+</core-label>
+<core-label horizontal layout class="chk">
+<paper-checkbox for></paper-checkbox>
+<div vertical layout>
+	Newspaper Articles
+</div>
+</core-label>
+<core-label horizontal layout class="chk">
+<paper-checkbox for></paper-checkbox>
+<div vertical layout>
+	Sign Writing on Vehicles
+</div>
+</core-label>
+
+<paper-input-decorator label="How or why do you think you'll be successful in this market?" floatingLabel>
+<paper-autogrow-textarea>
+<textarea></textarea>
+</paper-autogrow-textarea>
+</paper-input-decorator>
+
+<paper-input-decorator label="Describe how/where you plan to sell your product/service and advertise/promote your business. Give details of costs." floatingLabel>
+<paper-autogrow-textarea>
+<textarea></textarea>
+</paper-autogrow-textarea>
+</paper-input-decorator>
+<p>What do you charge per hour, per job, or for items sold? Include all the overheads and most importantly profit</p>
+<li>Overheads include</li>
+<li>Materials</li>
+<li>Stock</li>
+<li>Electricity/Rent</li>
+<li>Labour</li>
+<li>Admin Costs etc</li>
+<input id="cv" type="file">
+
+<p>Remember to cover unproductive time such as travellig, administration and quotations i.e all the time spent in the business</p>
+<paper-input-decorator label="How many items/services/jobs are you going to sell? Explain how you will meet the target" floatingLabel>
+<paper-autogrow-textarea>
+<textarea></textarea>
+</paper-autogrow-textarea>
+</paper-input-decorator>
+</div>
+<div class="guild">
+	<div class="title">Note for Guidance</div>
+	<p>Explain in your own words what you are going to do</p>
+	<p><b>Consider the following if applicable:</b></p>
+	<ul>
+		<li>Town and Country regulations</li>
+		<li>Leasing(length, cost and notice of termination)</li>
+		<li>Rental(renewal and review)</li>
+		<li>Fixtures and Fittings</li>
+		<li>Types of Licenses required</li>
+		<li>Environmental/hygiene regulation</li>
+		<li>Cost</li>
+		<li>Size</li> 
+		<li>Location</li>
+		<li>Access</li>
+		<li>Security</li>
+	</ul>
+</div>
+</div>
+<div class="content">
+	<div class="main" layout vertical>
+	<div class="title">Sales Analysis</div>
+	
+		<paper-input-decorator label="Explain your pricing policy" floatingLabel>
+		<paper-autogrow-textarea>
+		<textarea></textarea>
+	</paper-autogrow-textarea>
+</paper-input-decorator>
+
+
+
+<paper-input-decorator label="Provide a full list of equipment and supppies needed to runthe business stating reasons and value/costs" floatingLabel>
+<p>Consider all options:</p>
+<li>Second-hand</li>
+<li>New</li>
+<li>Lease/Hire</li>
+<paper-autogrow-textarea>
+<textarea></textarea>
+</paper-autogrow-textarea>
+</paper-input-decorator>
+</div>
+<div class="guild">
+	<div class="title">Note for Guidance</div>
+	<p>How have you worked out your monthly sales figure used in cash flow</p>
+	<p><b>Dont forget to include:</b></p>
+	<ul>
+		<li>Company letterhead</li>
+		<li>Leaflets</li>
+		<li>Business cards</li>
+	</ul>
+	<p>Research, price and list all insurance</p>
+	<ul>
+		<li>Public liabiliy</li>
+		<li>Product liability</li>
+		<li>Goods in transit</li>
+		<li>Fire and thet</li>
+		<li>Employers liability</li>
+		<li>Vehicle</li>
+		<li>Personal Insurance</li>
+		<li>Premises</li>
+	</ul>
+</div>
+</div>
+<div class="content">
+	<div class="title">Equipment and Transport</div>
+	<div class="main" layout vertical>
+
+	</div>
+</div>
+<div class="content">
+	<div class="main" layout vertical>
+	<div class="title">Insurance</div>
+	<paper-input-decorator label="Detail all insurance necessary for the business(Include costs where posible)" floatingLabel>
+	<paper-autogrow-textarea>
+	<textarea></textarea>
+	</paper-autogrow-textarea>
+	</paper-input-decorator>
+	</div>
+	<div class="guild">
+	<div class="title">Note for Guidance</div>
+		<p><b>List all funding applied for/recieved e.g</b></p>
+		<li>Banks</li>
+		<li>Credit Unions</li>
+		<li>Fund Aid</li>
+		<li>Family/riends</li>
+		<li>Own Savings</li>
+		<li>Other lending agencies</li>
+	</div>	
+</div>
+<div class="content">
+	<div class="title">Financial Details</div>
+	<div class="main" layout vertical>
+	</div>
+</div>
+</core-animated-pages>
+
+</template>
+
+<script>
+	(function() {
+		Polymer({ });
+	})();
+</script>
+
+</polymer-element>

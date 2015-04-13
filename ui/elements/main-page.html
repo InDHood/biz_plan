@@ -1,0 +1,101 @@
+<link rel="import" href="elem.html">
+
+<polymer-element name="main-page" attributes="home">
+	<template>
+		
+		<more-route path="{{urlFor('plan')}}" context></more-route>
+
+		<link rel="stylesheet" href="/_poly/tmpl/css/css.css">
+
+		<core-drawer-panel>
+		
+		<core-header-panel drawer>
+
+			<core-toolbar class="tall"><div class="bottom"><span>L eye</span>leyume@yahoo.com</div></core-toolbar>
+			
+			<more-route-selector>
+
+				<core-menu class="menu" selected="{{page}}">
+					<paper-item route="{{urlFor('plan')}}">All Business Plan</paper-item>
+					<paper-item route="{{urlFor('new')}}">Add New</paper-item>
+					<paper-item route="{{urlFor('profile')}}">Profile</paper-item>
+				</core-menu>
+
+			</more-route-selector>
+
+		</core-header-panel>
+
+		<core-scroll-header-panel main condenses keepCondensedHeader condensedHeaderHeight="130">
+
+			<core-toolbar class="tall" style="height:240px;">
+
+				<paper-icon-button icon="menu" core-drawer-toggle></paper-icon-button>
+
+				<div class="middle">Biz <b>Plan</b></div>
+
+				<span flex></span>
+
+				<paper-menu-button id="menuBtn">
+					<paper-icon-button icon="more-vert"></paper-icon-button>
+					<paper-dropdown class="dropdown" halign="right">
+						<more-route-selector>
+							<core-menu class="menu">
+								<paper-item route="profile">Settings</paper-item>
+								<paper-item route="help">Help</paper-item>
+								<paper-item route="logout">Logout</paper-item>
+							</core-menu>
+						</more-route-selector>
+					</paper-dropdown>
+				</paper-menu-button>
+				
+				<core-animated-pages class="bottom" selected="{{page}}" transitions="cross-fade slide-up">
+					<section>
+						<div class="subtitle" slide-up>All Biz Plan</div>
+					</section>
+					<section>
+						<paper-tabs flex class="tabbed" selected="{{selected}}" scrollable cross-fade>
+							<paper-tab slide-up>Business Plan</paper-tab>
+							<paper-tab slide-up>Description of Business</paper-tab>
+							<paper-tab slide-up>Owner/Staff Personal Details</paper-tab>
+							<paper-tab slide-up>Business Training</paper-tab>
+							<paper-tab slide-up>Your Market</paper-tab>
+							<paper-tab slide-up>Sales Analysis</paper-tab>
+							<paper-tab slide-up>Equipment and Transport</paper-tab>
+							<paper-tab slide-up>Insurance</paper-tab>
+							<paper-tab slide-up>Financial Details</paper-tab>
+						</paper-tabs>
+					</section>
+					<section>
+						<div class="subtitle" slide-up>Profile</div>
+					</section>
+				</core-animated-pages>
+
+			</core-toolbar>
+
+			<core-animated-pages selected="{{page}}" transitions="cross-fade">
+				<section>
+					<div cross-fade><all-page></all-page></div>
+				</section>
+				<section>
+					<div cross-fade><new-page selected="{{selected}}"></new-page></div>
+				</section>
+				<section>
+					<profile-page></profile-page>
+				</section>
+			</core-animated-pages>
+
+			
+
+
+		</core-scroll-header-panel>
+
+	</core-drawer-panel>
+
+	</template>
+
+	<script>
+		(function() {
+			Polymer({ });
+		})();
+	</script>
+</polymer-element>
