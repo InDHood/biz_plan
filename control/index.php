@@ -20,11 +20,11 @@ class Control {
 		if( in_array( $pm[0], $this->auth_url ) ) {
 			
 			$this->{$pm[0]}();
-		
+
 		} else {
 
 			$this->p404();
-		
+
 		}
 
 		$this->ui();
@@ -57,13 +57,16 @@ class Control {
 
 
 	public function users(){
-		$data['page'] = 'users';
+		
+		$d['page'] = 'users';
 		
 		$url = API . 'users';
 		$method = 'GET';
 
+		$d['users'] = $this->callAPI( $method, $url );
 
-		$this->data = $data;
+		$this->data = $d;
+
 	}
 
 
@@ -84,6 +87,8 @@ class Control {
 
 
 	public function callAPI( $method, $url, $data = false ) {
+
+		$data['apiKey'] = API_KEY;
 
 		$curl = curl_init();
 

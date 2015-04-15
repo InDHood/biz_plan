@@ -34,6 +34,7 @@ if ( isset( $url[0] ) && $url[0] == 'admin' ) {
     require_once ROOT . 'ui/index.php';
 }
 
+
 $control = new Control( $url );
 
 // Functions
