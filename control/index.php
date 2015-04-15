@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php 
 
 class Control {
@@ -123,3 +124,6 @@ class Control {
 }
 
 ?>
+=======
+index.php
+>>>>>>> a267b8eaab5a93b499772801663e6ef66f8060ec
