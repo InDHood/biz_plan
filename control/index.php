@@ -35,7 +35,12 @@ class Control {
 	protected function aption(){
 
 		if( $_POST ) {
-
+			//e($_POST);
+			$data=$_POST;
+			$method= 'POST';
+			$url= API . "users";
+			$result= $this->callAPI($method, $url, $data );
+			e($result);
 		}
 
 	}
