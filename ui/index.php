@@ -19,7 +19,6 @@ class UI{
 		e( $data );
 	}
 
-	
 
 }
 

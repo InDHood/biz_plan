@@ -16,6 +16,8 @@ define( 'UI', URL . 'ui/' );
 ( !empty( $_GET['url'] ) ) ? define( '_URL', $_GET['url'] ) : define( '_URL', '' );
 
 define('API_KEY', '6gdzV8tT2YFXJFt2vN6Kjopx824p61on');
+define('API', 'http://workspace/biz_api/');
+
 
 require_once ROOT . 'control/index.php';
 

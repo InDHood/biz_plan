@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php 
 
 class Control {
@@ -58,7 +57,13 @@ class Control {
 
 
 	public function users(){
-		$this->data['page'] = 'users';
+		$data['page'] = 'users';
+		
+		$url = API . 'users';
+		$method = 'GET';
+
+
+		$this->data = $data;
 	}
 
 
@@ -78,11 +83,12 @@ class Control {
 
 
 
-	public function CallAPI($method, $url, $data = false) {
+	public function callAPI( $method, $url, $data = false ) {
+
 		$curl = curl_init();
 
-		switch ($method)
-		{
+		switch ( $method ) {
+
 			case "POST":
 			curl_setopt($curl, CURLOPT_POST, 1);
 
@@ -124,6 +130,3 @@ class Control {
 }
 
 ?>
-=======
-index.php
->>>>>>> a267b8eaab5a93b499772801663e6ef66f8060ec
