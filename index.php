@@ -116,8 +116,8 @@ function css($a = '') {
     $a_ = explode('|', $a);
     foreach ($a_ as $aa) {
         if(ex($a, 'last','.')=='css') $ext = ''; else $ext = '.css';
-        echo '<link href="/ui/css/' . trim($aa) . $ext . '" type="text/css" rel="stylesheet" />';
-        // echo '<link href="' . UI . 'css/' . trim($aa) . $ext . '" type="text/css" rel="stylesheet" />';
+        // echo '<link href="/ui/css/' . trim($aa) . $ext . '" type="text/css" rel="stylesheet" />';
+        echo '<link href="' . UI . 'css/' . trim($aa) . $ext . '" type="text/css" rel="stylesheet" />';
     }
 }
 

@@ -35,12 +35,27 @@ class Control {
 	protected function aption(){
 
 		if( $_POST ) {
-			//e($_POST);
-			$data=$_POST;
-			$method= 'POST';
-			$url= API . "users";
-			$result= $this->callAPI($method, $url, $data );
-			e($result);
+			// e($_POST);exit();
+			if ($_POST['_task'] == "register") {
+				
+				unset($_POST['_task']);
+
+				$data=$_POST;
+				$method= 'POST';
+				$url= API . "users";
+				$result= $this->callAPI($method, $url, $data );
+				e($result);
+			}
+			else if ($_POST['_task'] == "login") {
+
+				unset($_POST['_task']);
+
+				$data=$_POST;
+				$method= 'POST';
+				$url= API . "login";
+				$result= $this->callAPI($method, $url, $data );
+				e($result);
+			}
 		}
 
 	}
@@ -62,16 +77,15 @@ class Control {
 
 
 	public function users(){
-		
 		$d['page'] = 'users';
 		
 		$url = API . 'users';
 		$method = 'GET';
 
-		$d['users'] = $this->callAPI( $method, $url );
+		$d['users'] = objToArr( json_decode($this->callAPI( $method, $url )) );
 
+		
 		$this->data = $d;
-
 	}
 
 
@@ -88,6 +102,25 @@ class Control {
 		$UI->foot();
 
 	}
+	public static function tbl($tbl,$type="fields"){
+		$db = array(
+			'users' =>array( 
+				'table' => array('User'=>'user', 'Email'=>'email', 'First Name'=>'firstname', 'Last Name'=>'lastname',  'Phone'=>'phone',  'Gender'=>'gender')
+				)
+			);
+		return $db[$tbl][$type];
+	}
+	// public function login() {
+	// 	// if(empty($_POST)) { $this->home(); exit(); }
+	// 	if(!empty($_POST['user'])) { $check = _query('users', "user = '".$_POST['user']."' AND pass = '".$_POST['pass']."'",'',1,array('id','user','pass','email','firstname','lastnname')); }
+	// 	// if(!empty($_POST['email'])) { $check = _query('users', "email = '".$_POST['email']."' AND pass = '".$_POST['pass']."'",'',1,array('id','user','email','details','role')); }
+	// 	// if(!empty($check[0])) { $result = (object) $check[0]; }		
+	// 	e('success');
+
+	// 	} else {
+	// 		e('incorrect');
+	// 	}
+	// }
 
 
 
