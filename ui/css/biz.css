@@ -1,0 +1,9 @@
+body { margin: 0; font-family: "Roboto"; background-color: #eee;}
+.container { width: 100%;}
+header { height: 200px; background-color: #fafafa; padding-left: 10px; }
+.title { font-size: 100px; color: #06f; padding-top: 30px;}
+section { padding-left: 20px; padding-top: 10px;}
+section a { text-decoration: none; font-size: 25px; color: #06f; padding: 10px 0 40px 0;}
+form input { height: 40px; width: 350px;}
+._form{ margin-bottom: 20px;}
+form input .btn{ color: #fff; background-color: #06f; width: 200px;}
